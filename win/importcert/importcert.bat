@@ -1,0 +1,2 @@
+echo | openssl s_client -servername localhost -connect localhost:8443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > gcert.crt
+keytool -import -alias hml-cadastrorfb -file gcert.crt -keystore $JAVA_HOME/lib/security/cacerts -storepass changeit -trustcacerts -noprompt

@@ -1,0 +1,1 @@
+openssl ca -config .\openssl.conf -out cert.crt -infiles myrequest.txt
